@@ -80,10 +80,7 @@ body {
 
 .button3 {border-radius: 8px;}
 
-body {
-  font-family: Arial;
-  margin: 0;
-}
+
 
 /* Header/Logo Title */
 .header {
@@ -193,7 +190,74 @@ img {
   }
 }
 
+/*slideshow*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
 
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
 
 </style>
 
@@ -206,17 +270,80 @@ img {
     <a href="#default" class="logo"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTNVR5ngMt9BgeJ4s9X88OjuzbwKQGZLS9de9Td6H13sHUoHZIgTVNMrUAAfdKuOMBc_MO1qH4xl1nt/pub?w=317&amp;h=40"></a>
     <div class="navBar-right">
       <a class="active" href="#home">Home</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
     </div>
   </div>
 
 
 
-<div class="header">
-  <h1>Study Bots</h1>
-  <p>The after school helpers</p>
-</div>
+  <div class="slideshow-container">
+
+  <div class="mySlides">
+    <div class="header">
+    <h1>Study Bots</h1>
+    <p>The after school helpers</p>
+  </div>
+
+  </div>
+
+  <div class="mySlides">
+    <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+    <button>Hello</button>
+  </div>
+
+  <div class="mySlides">
+    <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+    <button>Hello</button>
+  </div>
+
+  <div class="mySlides">
+    <p>I have not failed. I've just found 10,000 ways that won't work.</p>
+    <button>Hello</button>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+
 
 <h1></h1>
 
@@ -247,9 +374,10 @@ img {
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=621&amp;h=626">
     </div>
     <div class="column-66">
-      <h1 class="large-font" style="color:#1d347bff;"><b>HOB</b></h1>
-      <p>Hop a simple robot here to help organize your homework</p>
-      <button class="button" style="background-color:#1d347bff">Go to HOB</button>
+      <h1 class="large-font" style="color:#1d347bff;"><b>HOB - Coming Soon</b></h1>
+      <p style="display:none">Hob a simple robot here to help organize your homework</p>
+      <p>5 days</p>
+      <button class="button" style="display:none; background-color:#1d347bff;">Go to HOB</button>
     </div>
   </div>
 </div>
@@ -261,7 +389,7 @@ img {
     <div class="column-66">
 
 <h1 class="large-font" style="color:#0c0c2fff;"><b>More Coming Soon!</b></h1>
-      <p>Have some advice?</p>
+      <p>Have some Ideas?</p>
       <a class="button" style="background-color:#0c0c2fff">Yes!</a>
     </div>
     <div class="column-33">
