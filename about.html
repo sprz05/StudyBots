@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+
   /*navBar*/
   * {box-sizing: border-box;}
 
@@ -58,6 +59,85 @@
       float: none;
     }
   }
+
+  /*ABOUT HEADER*/
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+  }
+
+
+  /*about content*/
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
 </style>
   <body>
 
@@ -71,16 +151,51 @@
     </div>
 
 
-<center>
-    <h1>About</h1>
-    <p>Study Bots aims to make homework and studying easier for students in grade 1st-5th grade. By equipping students with basic organization and study skills needed for school. It will help students organize their classwork and help with the stress that comes when looking at a “pile of homework”. It will also help students come to like studying. By breaking up study/homework sessions into short sprints with breaks in between (e.g. 30 minutes of studying, 10 minute break) This will also help students recharge their batteries and keep them on task. Additionally, it will also provide students with resources that will further help organize larger homework assignments, such as school projects.</p>
-</center>
+    <div class="header">
+      <h1>About Study Bots</h1>
+      <p>The After School Helpers.</p>
+      <p>Study Bots aims to make homework and studying easier and enjoyable for students in grade 1st-5th grade. By equipping students with basic organization and study skills needed for school when there young it will set them up for healthier and effective study habits for the future.
+     <p> </p>
+      It aims to help students organize and guide their homework and homework session. Additionally, it will also provide students with resources that will further help organize larger homework assignments, such as school projects.</p>
+    </div>
 
-    <h2>Learn more about how specific Study Bots help with homework and studying</h2>
+    <h2 style="text-align:center">Our Bots</h2>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQghAOBmgnQoBekzmhYYyurC4toECZYwmwGn4sl_MdPHwzcPx_vdnTYcZkH4mn7YQ9CsZKUNNhrx5d/pub?w=207&amp;h=209">
+    <div class="container">
+            <h2>ITHB</h2>
+            <p class="title">Interval Timer Homework Bot</p>
+            <p>ITHB, aim to help students come to like studying. Most students dread studying because we’re taught at a young age to that it means sitting at a desk, for hours. When in reality it’s not...</p>
+            <p><button class="button">Read more</button></p>
+          </div>
+        </div>
+      </div>
 
-    <div>
-      <
-      <button>read more</button>
+      <div class="column">
+        <div class="card">
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=207&amp;h=209">
+    <div class="container">
+            <h2>HOB</h2>
+            <p class="title">Homework Organizer Bot</p>
+            <p>Coming in 5 days!</p>
+            <p>but until then read this post about organizing your homework, It only takes 5 minutes!</p>
+            <p><button class="button">Read more</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSA4-IYsWL3Se4670ljbqA5RBoP-kitfWmiYkK3YxYJ9oVy8uCvhWM-KjU3Boyqz5uKgopdc09g7B_j/pub?w=265&amp;h=184">      <div class="container">
+            <h2>Resources</h2>
+            <p class="title">for longer homework assignments</p>
+            <p>Our resources aim to help make longer homework assignemnts be less stressful.</p>
+            <p><button class="button">Read More</button></p>
+          </div>
+        </div>
+      </div>
     </div>
 
 
