@@ -66,6 +66,81 @@ body {
 }
 
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
 /*resource content*/
 body {
 font-family: Arial, Helvetica, sans-serif;
@@ -130,6 +205,7 @@ background-color: #000;
 text-align: center;
 cursor: pointer;
 width: 100%;
+text-decoration: none;
 }
 
 .button:hover {
@@ -152,62 +228,117 @@ background-color: #555;
     <a href="bots.html">Bots</a>
     <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
-    <a class="active" href="resources.html">Resources & Advice</a>
+    <a class="active" href="resources.html">Spare Parts & Blue Prints</a>
   </div>
 </div>
 
-<center>
+<!-- MAIN (Center website) -->
+<div class="main">
 
-<div class="header">
-<h1>Resources & Advice</h1>
-<p>Have some advice tips or a resource you made you want to share? We'd love to help, fill out the form below or email us your work at studybots1@gmail.com</p>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdMfUy6L6lcTeJq-u-rPVIzl-CdQy-PTHkzMKLcAI0SzltPtg/viewform?usp=sf_link" class="button" type="button" style="background-color:#0c0c2fff">share work</a></p>
+<h1><center>Spare Parts & Blue Prints</center></h1>
+<p><center>Have something you want to share that can make school more enjoyable? It can be some quick advice or something you made. If other students like it, it might even become a Study Bot!</center></p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdMfUy6L6lcTeJq-u-rPVIzl-CdQy-PTHkzMKLcAI0SzltPtg/viewform?usp=sf_link" class="button" type="button" style="background-color:#0c0c2fff">Yes!</a></p>
+
+<hr>
+
+<h2>We have spare parts and blue prints that give you:</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('projects')"> Project Help</button>
+  <button class="btn" onclick="filterSelection('')"> Advice</button>
+  <button class="btn" onclick="filterSelection('tips + tricks')">Tips+Tricks</button>
+  <button class="btn" onclick="filterSelection('tips + tricks')">Resources</button>
 </div>
 
-
+<!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="column">
-    <div class="card">
+  <div class="column tips + tricks">
+    <div class="content">
+      <img class = "img" src="https://docs.google.com/drawings/d/e/2PACX-1vQMhoY0_un0SZOgBSDCJZ47N6X1OsIIW2P19QEfZ7TZd33bFIwaRCaytF8hJmQ6H6IYtXSfJ3YZHS40/pub?w=337&amp;h=326">
+
+      <h4>Master Math</h4>
+      <p class="title">By CoffeeCup20</p>
+      <p>be more comfortable with math.</p>
+      <p><a href="https://docs.google.com/document/d/e/2PACX-1vRz95Ig-j90d4ecJhFVge03Q2ejjBuBR75FBz4yONUBqtpB7jM5uQciHFamU-7h5DF_rsny0d0JsikA/pub" class="button" type="button" style="background-color:#0c0c2fff">read more</a></p>
+
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
 <img class = "img" src="https://docs.google.com/drawings/d/e/2PACX-1vRzviXqJnHfAJDJ-2LT_FoQ-aLEW7W1f3RPfOIiKqrDsCTJ-q2BkBJR-IFbL5Wx-gxI6G6ibv7r12Sj/pub?w=337&amp;h=326">
-<div class="container">
-        <h2>Master Math</h2>
-        <p class="title">By CoffeeCup20</p>
-        <p>Learn how to be more comfortable with math</p>
-        <p><a href="https://docs.google.com/document/d/e/2PACX-1vRz95Ig-j90d4ecJhFVge03Q2ejjBuBR75FBz4yONUBqtpB7jM5uQciHFamU-7h5DF_rsny0d0JsikA/pub" class="button" type="button" style="background-color:#0c0c2fff">read more</a></p>
+      <h4>Slideshow Advice</h4>
+      <p>Slideshow tips + resources + tricks brought to you by presentation experts.</p>
+              <p><a href="https://docs.google.com/document/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" class="button" type="button" style="background-color:#0c0c2fff">read more</a></p>
 
-      </div>
     </div>
   </div>
-
-  <div class="column">
-    <div class="card">
-<img class = "img" src="https://docs.google.com/drawings/d/e/2PACX-1vQMhoY0_un0SZOgBSDCJZ47N6X1OsIIW2P19QEfZ7TZd33bFIwaRCaytF8hJmQ6H6IYtXSfJ3YZHS40/pub?w=337&amp;h=326">
-<div class="container">
-        <h2>Slideshows</h2>
-        <p class="title">By PandaCubs</p>
-        <p>Slideshow tips + resources + tricks brought to you by presentation experts.</p>
-        <p><a href="https://docs.google.com/document/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" class="button" type="button" style="background-color:#0c0c2fff">read more</a></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img class = "img" src="https://docs.google.com/drawings/d/e/2PACX-1vQXiCjp-kdFj4H2sLV1SOJU5bav0mCUIkLz9BMkLbiqRjWBk9C4s13-0R7hPUf6fRiEKoGTxDkEaGii/pub?w=337&amp;h=326">
-<div class="container">
-        <h2>Organizing your Homework</h2>
-        <p class="title">By CoffeeCup20</p>
-        <p>Feel like you don't have enough time? Do you feel like your homework is out of control? We're here to help!</p>
+  <div class="column nature">
+    <div class="content">
+          <img class = "img" src="https://docs.google.com/drawings/d/e/2PACX-1vQXiCjp-kdFj4H2sLV1SOJU5bav0mCUIkLz9BMkLbiqRjWBk9C4s13-0R7hPUf6fRiEKoGTxDkEaGii/pub?w=337&amp;h=326">
+      <h4>Organizing your Homework</h4>
+      <p>By CoffeeCup20</p>
+      <p>Feel like you don't have enough time? Do you feel like your homework is out of control?</p>
       <p><a href="https://docs.google.com/document/d/e/2PACX-1vTnbEgQMZ9Ez3N9L3nPTTQp0sb9-JbmMD6_JtRW7gAEn31nPlJapR4pS1tHjXWnG46IxVbpL16AsoDd/pub" class="button" style="background-color:#0c0c2fff">read more</a></p>
-      </div>
+
     </div>
   </div>
+  </div>
+<!-- END GRID -->
 </div>
 
-
-
-
+<center><h2>hmm ... there isn't much here, yet!</h2>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdMfUy6L6lcTeJq-u-rPVIzl-CdQy-PTHkzMKLcAI0SzltPtg/viewform?usp=sf_link" class="button" type="button" style="background-color:#0c0c2fff">I want to help!</a></p>
 </center>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 
 
 </body>
