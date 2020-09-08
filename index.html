@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 /*navBar*/
 * {box-sizing: border-box;}
 
 body {
   height: 100%
   margin: 0;
-  font-family: 'Hind';
-  background:
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -20,6 +19,7 @@ body {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .navBar a {
@@ -44,7 +44,7 @@ body {
 }
 
 .navBar a.active {
-  background-color: #0c0c2fff;
+  background-image: radial-gradient( circle farthest-corner at -3.1% -4.3%, rgba(21,38,82,1) 0%, rgba(205, 112, 255) 90%);
   color: white;
 }
 
@@ -67,22 +67,20 @@ body {
 
 /*title/slideshow*/
 .button {
-  background-color: #150f36ff; /* Green */
-  border: none;
+  background-image: linear-gradient(to right, #24184bff 0%, #47377dff 100%);
+  border-radius: 6;
   color: white;
   padding: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  font-family: 'Audiowide';
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
   margin: 4px 2px;
   cursor: pointer;
   text-decoration: none;
 }
 
-
-.button3 {border-radius: 8px;}
 
 
 
@@ -92,18 +90,17 @@ body {
   text-align: center;
   background: #1abc9c;
   color: white;
-  font-size: 30px;
+  font-size: 60px;
+  height: 90vh;
+}
+
+.subtitle{
+  font-size: 30px
 }
 
 /* Page Content */
 .content {padding:20px;}
 
-
-body {
-    font-family: 'Audiowide';font-size: 22px;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .topnav {
   overflow: hidden;
@@ -171,7 +168,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   background-color: #4CAF50;
-  font-family: 'Hind';
+font-family: 'Roboto Condensed', sans-serif;
 }
 
 img {
@@ -193,7 +190,7 @@ img {
 
 /*slideshow*/
 * {box-sizing: border-box}
-body {font-family: 'Hind'; margin:0}
+body {font-family: 'Roboto', sans-serif; margin:0}
 
 /* Slideshow container */
 .slideshow-container {
@@ -325,9 +322,9 @@ body {font-family: 'Hind'; margin:0}
 
 
 
-    <div class="header" style="background-color:#20124dff">
+    <div class="header" style="  background-image: radial-gradient( circle farthest-corner at -3.1% -4.3%, rgba(21,38,82,1) 0%, rgba(205, 112, 255) 90%);">
       <h1>Study Bots</h1>
-      <p>The after school helpers.</p>
+      <p class="subtitle">The after school helpers.</p>
     </div>
   </div>
 
@@ -342,7 +339,7 @@ body {font-family: 'Hind'; margin:0}
     <div class="column-66">
 <h1 class="large-font" style="color:#0c0c2fff;"><b>ITHB</b></h1>
       <p>ITHB (Interval Timer Homework Bot), Aims to make studying effective and fun.</p>
-      <a href="https://sprz05.github.io/ITHIB_v1.0/" class="button" style="background-color:#0c0c2fff">Go to ITHB</a>
+      <a href="https://sprz05.github.io/ITHIB_v1.0/" class="button" style="border-radius:8px;">Go to ITHB</a>
     </div>
     <div class="column-33">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQghAOBmgnQoBekzmhYYyurC4toECZYwmwGn4sl_MdPHwzcPx_vdnTYcZkH4mn7YQ9CsZKUNNhrx5d/pub?w=414&amp;h=418">
@@ -359,8 +356,8 @@ body {font-family: 'Hind'; margin:0}
       <h1 class="large-font" style="color:#1d347bff;"><b>HOB - Coming Soon</b></h1>
       <p style="display:none">Hob a simple robot here to help organize your homework</p>
       <p>in 5 days, but until then read this post about organizing your homework, It only takes 5 minutes!</p>
-      <button class="button" style="display:none; background-color:#1d347bff;">Go to HOB</button>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vTnbEgQMZ9Ez3N9L3nPTTQp0sb9-JbmMD6_JtRW7gAEn31nPlJapR4pS1tHjXWnG46IxVbpL16AsoDd/pub" class="button" style="background-color:#0c0c2fff">read more</a>
+      <button class="button" style="display:none;">Go to HOB</button>
+      <a href="https://docs.google.com/document/d/e/2PACX-1vTnbEgQMZ9Ez3N9L3nPTTQp0sb9-JbmMD6_JtRW7gAEn31nPlJapR4pS1tHjXWnG46IxVbpL16AsoDd/pub" class="button" style="border-radius:8px;">read more</a>
     </div>
   </div>
 </div>
@@ -374,7 +371,7 @@ body {font-family: 'Hind'; margin:0}
 
 <h1 class="large-font" style="color:#0c0c2fff;"><b>SLAB</b></h1>
       <p>SLAB aims to help make school, longer homework assignments, and homework, in general, be less stressful. All of the spare parts and blue prints are from students! </p>
-      <a href="resources.html" class="button" style="background-color:#0c0c2fff">Go to SALB</a>
+      <a href="resources.html" class="button" style="border-radius:8px;">Go to SALB</a>
     </div>
     <div class="column-33">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vRDOXNgmwL7aA99-gaOMVjOMiQUzaCVnUl3h2u3H01q1RRiR5jKn4lJJ1lEoy6io1inxtufby6MULGh/pub?w=524&amp;h=514">
@@ -393,7 +390,7 @@ body {font-family: 'Hind'; margin:0}
     <div class="column-66">
       <h1 class="large-font" style="color:#1d347bff;"><b>ASPB</b></h1>
       <p>Done with homework, don't have anything to do? ASPB can help! It hosts clubs on our website.You can join one, see what clubs are making, meet new people, or start your own club!</p>
-      <a href="ASPB.html" class="button" style="background-color:#1d347bff;">Let's go!</a>
+      <a href="ASPB.html" class="button" style="border-radius:8px;">Let's go!</a>
     </div>
   </div>
 </div>
@@ -407,7 +404,7 @@ body {font-family: 'Hind'; margin:0}
 
 <h1 class="large-font" style="color:#0c0c2fff;"><b>More Coming Soon!</b></h1>
       <p>Have some Ideas?</p>
-      <a href="contact.html" class="button" style="background-color:#0c0c2fff">Yes!</a>
+      <a href="contact.html" class="button" style="border-radius:8px;">Yes!</a>
     </div>
     <div class="column-33">
     </div>
@@ -417,7 +414,7 @@ body {font-family: 'Hind'; margin:0}
 <h1></h1>
 
 
-<center><button class="button button3" style="background-color:#1d347bff" onclick="typeWriter()">Fun fact:</button></center>
+<center><button class="button" style="border-radius:8px;" onclick="typeWriter()">Fun fact:</button></center>
 
 <center><p id="inspiration"></p></center>
 
