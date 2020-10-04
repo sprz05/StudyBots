@@ -137,9 +137,7 @@
   }
 
 
-  .container {
-    padding: 64px;
-  }
+
 
   .row:after {
     content: "";
@@ -195,119 +193,95 @@
     }
   }
 
-  /*slideshow*/
-  * {box-sizing: border-box}
-  body {font-family: 'Roboto', sans-serif; margin:0}
 
-  /* Slideshow container */
-  .slideshow-container {
-    position: relative;
-    background: #f1f1f1f1;
+  .footer {
+      background: $secondary;
+      padding: 1.5rem 0;
+
+      .col-footer {
+          .heading {
+              color: $footer-heading-color;
+              letter-spacing: 0;
+              font-size: $footer-heading-font-size;
+              text-transform: uppercase;
+              font-weight: $font-weight-bold;
+              margin-bottom: 1rem;
+          }
+      }
+
+      .nav .nav-item .nav-link,
+      .footer-link {
+          color: $footer-link-color !important;
+
+          &:hover {
+              color: $footer-link-hover-color !important;
+          }
+      }
+
+      .list-unstyled li a {
+          display: inline-block;
+          padding: .125rem 0;
+          color: $footer-link-color;
+          font-size: $footer-link-font-size;
+
+          &:hover {
+              color: $footer-link-hover-color;
+          }
+      }
+
+      .copyright {
+          font-size: $font-size-sm;
+      }
+
+      .dropdown {
+        .btn:not(:disabled):not(.disabled):active:focus,
+        .btn:not(:disabled):not(.disabled).active:focus {
+          box-shadow: none;
+        }
+      }
   }
 
-  /* Slides */
-  .mySlides {
-    display: none;
-    padding: 80px;
-    text-align: center;
+  .footer-dark {
+      .col-footer .heading {
+          color: $white;
+      }
   }
 
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #888;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  .footer.has-cards {
+      overflow: hidden;
+      padding-top: 500px;
+      margin-top: -420px;
+      position: relative;
+      background: transparent;
+      pointer-events: none;
+
+      &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 600px;
+          height: 2000px;
+          background: theme-color("secondary");
+          transform: skew(0,-8deg);
+      }
+
+      .container {
+          pointer-events: auto;
+          position: relative;
+      }
   }
 
-  /* Position the "next button" to the right */
-  .next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
+  .nav-footer {
+      .nav-link {
+          font-size: $font-size-sm;
+      }
 
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-    color: white;
-  }
-
-  /* The dot/bullet/indicator container */
-  .dot-container {
-      text-align: center;
-      padding: 20px;
-      background: #ddd;
-  }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  /* Add a background color to the active dot/circle */
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-
-
-  /*image buttons*/
-  * {
-    box-sizing: border-box;
-  }
-
-  .column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-  }
-
-  /* Clearfix (clear floats) */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  .img{
-   box-shadow: 10px 10px 5px grey;
-   height: 50%;
-   width: 50%;
-  }
-
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-
-
-
-
-  /*footer*/
-
-  .footer{
-     left: 0;
-     bottom: 0;
-     width: 100%;
-     color: grey;
-     text-align: center;
-
+      .nav-item:last-child {
+          .nav-link {
+              padding-right: 0;
+          }
+      }
   }
 
   </style>
@@ -594,7 +568,7 @@
             <div class="column-66">
 
         <h1 class="large-font" style="color:#0c0c2fff;"><b>SLAB</b></h1>
-              <p>SLAB aims to help make school, longer homework assignments, and homework, in general, be less stressful. All of the spare parts and blue prints are from students! </p>
+              <p>SLAB aims to help make school, longer homework assignments, and homework, in general, be less stressful. It shares tricks/trips/resources from students!</p>
               <p>Use SLAB when you need or want to share some advice/work for school.</p>
               <a href="resources.html" target="_blank" class="btn btn-primary" style="color:white;">Go to SLAB</a>
             </div>
@@ -677,6 +651,7 @@
         <h1></h1>
 
 
+
         <center>    <button type="button" onclick="typeWriter()" class="btn btn-secondary">Fun Fact:</button></center>
 
         <center><p id="inspiration"></p></center>
@@ -740,13 +715,72 @@
 
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
 
-  <script>
-    window.TrackJS &&
-      TrackJS.install({
-        token: "ee6fab19c5a04ac1a32a645abde4613a",
-        application: "argon-design-system-pro"
-      });
-  </script>
+
+  <br /><br />
+
+</div>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="../assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<script src="../assets/js/plugins/moment.min.js"></script>
+<script src="../assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+<script src="../assets/js/plugins/bootstrap-datepicker.min.js"></script>
+<!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<script src="../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
+<script>
+  window.TrackJS &&
+    TrackJS.install({
+      token: "ee6fab19c5a04ac1a32a645abde4613a",
+      application: "argon-design-system-pro"
+    });
+</script>
 </body>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row row-grid align-items-center mb-5">
+      <div class="col-lg-6">
+        <h3 class="text-primary font-weight-light mb-2">Thank you for choosing us!</h3>
+        <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms</h4>
+      </div>
+      <div class="col-lg-6 text-lg-center btn-wrapper">
+        <a target="_blank" href="https://studybots1.blogspot.com/" rel="nofollow" style="background-color: orange; color: white;" class="btn btn-icon-only btn-blogger rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
+          <span class="btn-inner--icon"><i class="fab fa-blogger-b"></i></i></span>
+        </a>
+        <a target="_blank" href="https://github.com/sprz05/sprz05.github.io" rel="nofollow" class="btn btn-icon-only btn-github rounded-circle" data-toggle="tooltip" data-original-title="Star on Github">
+          <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
+        </a>
+      </div>
+    </div>
+    <hr>
+    <div class="row align-items-center justify-content-md-between">
+      <div class="col-md-6">
+        <div class="copyright">
+          &copy; 2020 <a href="" target="_blank">Creative Tim</a>.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav nav-footer justify-content-end">
+          <li class="nav-item">
+            <a href="" class="nav-link" target="_blank">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link" target="_blank">License</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </html>
