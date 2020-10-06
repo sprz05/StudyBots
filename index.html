@@ -9,6 +9,26 @@
 
   </head>
 
+  #mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+
+  #mySidenav a:hover {
+    left: 0;
+  }
+
+  #rate {
+    top: 20px;
+    background-color: #f5f542;
+  }
 
   /*navBar*/
   * {box-sizing: border-box;}
@@ -194,20 +214,7 @@
   }
 
 
-  .footer {
-      background: $secondary;
-      padding: 1.5rem 0;
 
-      .col-footer {
-          .heading {
-              color: $footer-heading-color;
-              letter-spacing: 0;
-              font-size: $footer-heading-font-size;
-              text-transform: uppercase;
-              font-weight: $font-weight-bold;
-              margin-bottom: 1rem;
-          }
-      }
 
       .nav .nav-item .nav-link,
       .footer-link {
@@ -241,19 +248,7 @@
       }
   }
 
-  .footer-dark {
-      .col-footer .heading {
-          color: $white;
-      }
-  }
 
-  .footer.has-cards {
-      overflow: hidden;
-      padding-top: 500px;
-      margin-top: -420px;
-      position: relative;
-      background: transparent;
-      pointer-events: none;
 
       &:before {
           content: "";
@@ -283,6 +278,31 @@
           }
       }
   }
+
+
+
+  .feedback-button {
+    height: 40px;
+    border: solid 3px #759aff;
+    border-radius: 10px;
+    background: #759aff;
+    width: 100px;
+    line-height: 32px;
+    -webkit-transform: rotate(-90deg);
+    font-weight: 600;
+    color: white;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    text-align: center;
+    font-size: 17px;
+    position: fixed;
+    right: -40px;
+    top: 45%;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    z-index: 999;
+  }
+
 
   </style>
 
@@ -458,7 +478,7 @@
                 <h1 style="height:80px;"> </h1>
 
                 <img src="https://docs.google.com/drawings/d/e/2PACX-1vTrGJOijeGoSmLLhIHWO5YZslbuT0qOlXeCSZ5cJNJbmbuMD2Fnxl7WKVfWF1wmYt-Bs4c-kQhFL5qt/pub?w=1128&amp;h=336">
-                <p class="lead text-white">Build healthy and effective study habits.</p>
+                <p class="lead text-white">Study & do homework in a healthy, effective, & fun way.</p>
                 <div class="btn-wrapper mt-5">
 
                   <a style="display:none;" href="#" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0" target="_blank">
@@ -500,9 +520,10 @@
           </div>
         </div>
 
+
         <center><i class="fas fa-robot"></i></center>
         <p></p>
-        <center><p>Study bots provides bots and routines to build healthy study/homework habits. With consistency students will have memorized these routines/guides and made them into habits. If you're new here start off by either picking the regualr (for everday homework and studying) or Test prep routine.</p></center>
+        <center><p>If you're new here start off by either picking the regualr (for everday homework and studying)</p></center>
 
 <center>
         <span></span>
@@ -523,17 +544,43 @@
 
 
 
+<!--form-->
+<div id="feedback-main">
+  <a id="popup" class="feedback-button" href='https://formcrafts.com/a/50729' data-fc-open='iqdbx'>Feedback</a>
+<script src="_include/js/feedback.js"></script>
+<!--end of form-->
+
+
 
 <p style="height:100px;"></p>
 
+
+<h1>Popular Bots</h1>
+
+<!-- Hob -->
+<div class="container" style="background-color:#f1f1f1; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <div class="row">
+    <div class="column-33">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=621&amp;h=626">
+    </div>
+    <div class="column-66">
+      <h1 class="large-font" style="color:#1d347bff;"><b>HOB</b></h1>
+      <p>Hob a simple robot here to help organizes your homework!</p>
+      <p>Use HOB while your doing homework.</p>
+      <a href="https://sprz05.github.io/HOBv1.0/" target="_blank" class="btn btn-primary" style="color:white;">Go to HOB</a>
+    </div>
+  </div>
+</div>
+
+<h1 style="height: 40px;"></h1>
+
+
         <!-- IDTH -->
-        <h1>Popular Bots</h1>
         <div class="container" style="background-color:#f1f1f1; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <div class="row">
             <div class="column-66">
         <h1 class="large-font" style="color:#0c0c2fff;"><b>ITHB</b></h1>
-              <p>Use ITHB while your doing homework.</p>
-              <p>ITHB (Interval Timer Homework Bot), Aims to make studying effective and fun.</p>
+              <p>Use ITHB while your doing homework. He'll help remind you to take brain breaks to recharge and stay more on task</p>
             <a href="https://sprz05.github.io/ITHIB_v1.0/" class="btn btn-primary" style="color:white;" target="_blank">Go to ITHB</a>
             </div>
             <div class="column-33">
@@ -542,37 +589,19 @@
         </div>
         </div>
 
-        <h1 style="height: 40px;"></h1>
-
-        <!-- Hob -->
-        <div class="container" style="background-color:#f1f1f1; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-          <div class="row">
-            <div class="column-33">
-        <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=621&amp;h=626">
-            </div>
-            <div class="column-66">
-              <h1 class="large-font" style="color:#1d347bff;"><b>HOB</b></h1>
-              <p>Hob a simple robot here to help organize your homework!</p>
-              <p>Use HOB while your doing homework.</p>
-              <a href="https://sprz05.github.io/HOBv1.0/" target="_blank" class="btn btn-primary" style="color:white;">Go to HOB</a>
-            </div>
-          </div>
-        </div>
-
-
           <h1 style="height: 40px;"></h1>
 
         <!-- SALB -->
         <div class="container" style="background-color:#f1f1f1; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <div class="row">
-            <div class="column-66">
+            <div class="column-33">
 
         <h1 class="large-font" style="color:#0c0c2fff;"><b>SLAB</b></h1>
               <p>SLAB aims to help make school, longer homework assignments, and homework, in general, be less stressful. It shares tricks/trips/resources from students!</p>
               <p>Use SLAB when you need or want to share some advice/work for school.</p>
               <a href="https://sprz05.github.io/SLAB_v1.0/" target="_blank" class="btn btn-primary" style="color:white;">Go to SLAB</a>
             </div>
-            <div class="column-33">
+            <div class="column-66">
         <img src="https://docs.google.com/drawings/d/e/2PACX-1vRDOXNgmwL7aA99-gaOMVjOMiQUzaCVnUl3h2u3H01q1RRiR5jKn4lJJ1lEoy6io1inxtufby6MULGh/pub?w=524&amp;h=514">
             </div>
             <h1> </h1>
@@ -584,12 +613,12 @@
         <!-- WWC -->
         <div class="container" style="background-color:#f1f1f1; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <div class="row">
-            <div class="column-33">
+            <div class="column-66">
         <img src="https://docs.google.com/drawings/d/e/2PACX-1vRXkG3Wgn06nnFCZEUet8JY8s_1PD4TS6Yi-1SjrLO5BjmqZekAjyX0ZwBhGMTWk-CL_c3eJ8WDxvP7/pub?w=414&amp;h=418">
             </div>
-            <div class="column-66">
+            <div class="column-33">
               <h1 class="large-font" style="color:#1d347bff;"><b>WWC</b></h1>
-              <p>Done with homework, don't have anything to do? World Wide Clubs can help! It hosts clubs on our website.You can join one, see what clubs are making, meet new students, or start your own club!</p>
+              <p>Done with homework, don't have anything to do? World Wide Clubs can help! It hosts clubs online.You can join one, see what clubs are making, meet new students, or start your own club!</p>
               <p>You can use WWC when your done with homework!</p>
               <a target="_blank" href="https://the-programmingclub.github.io/World-Wide-Clubs/" class="btn btn-primary" style="color:white;">Go to WWC</a>
             </div>
@@ -599,13 +628,17 @@
 
         <h1 style="height: 40px;"></h1>
 
+        <center>    <button type="button" onclick="typeWriter()" class="btn btn-secondary">Fun Fact:</button></center>
+
+        <center><p id="inspiration"></p></center>
+
         <h1 style="height: 40px;"></h1>
 
         <!-- Q+A -->
 
 
         <div class="section features-6">
-              <h1>Q+A:</h1>
+              <h1><strong>Q+A:</strong></h1>
           <div class="container">
             <div class="row align-items-center">
               <div class="col-lg-6">
@@ -650,11 +683,6 @@
 
         <h1></h1>
 
-
-
-        <center>    <button type="button" onclick="typeWriter()" class="btn btn-secondary">Fun Fact:</button></center>
-
-        <center><p id="inspiration"></p></center>
 
         <h1> </h1>
         <h1> </h1>
@@ -711,6 +739,16 @@
         }, 1000);
       }
     }
+  </script>
+
+  <script>
+  function toggle_visibility() {
+ var e = document.getElementById('feedback-main');
+ if(e.style.display == 'block')
+    e.style.display = 'none';
+ else
+    e.style.display = 'block';
+}
   </script>
 
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
