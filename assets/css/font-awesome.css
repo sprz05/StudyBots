@@ -12,6 +12,8 @@
   font-style: normal;
 }
 
+.topic-img{border-radius:12px}.topic-area .single-topic .topic-img img{width:100%}
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
