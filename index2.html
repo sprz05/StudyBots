@@ -312,6 +312,13 @@ footer {
 .inline-block {
    display: inline-block;
 }
+
+
+.column {
+  float: left;
+  padding: 5px;
+}
+
   </style>
 
 
@@ -332,6 +339,7 @@ footer {
   <!-- CSS Files -->
   <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="assets\css\background.css">
+<link rel="stylesheet" type="text/css" href="convery.css">
 
 </head>
 
@@ -403,9 +411,9 @@ footer {
                 </a>
 
 
-                  <a href="contact.html" class="nav-link" href="contact.html" role="button">
+                   <a href="makeStudyBot.html" class="nav-link"  role="button">
                      <i class="fas fa-envelope-open-text"></i>
-                    <span class="nav-link-inner--text">Contact</span>
+                    <span class="nav-link-inner--text">Make a Study Bot</span>
                   </a>
 
                  <a href="about.html" class="nav-link" href="#" role="button">
@@ -449,11 +457,11 @@ footer {
           <li class="nav-item d-none d-lg-block ml-lg-4">
 
 
-            <a href="contact.html" class="btn btn-neutral btn-icon">
+            <a href="makeStudyBot.html" class="btn btn-danger btn-icon">
               <span class="btn-inner--icon">
 
               </span>
-              <span class="nav-link-inner--text">Contact</span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
             </a>
 
             <a href="about.html" class="btn btn-neutral btn-icon">
@@ -468,7 +476,6 @@ footer {
   </nav>
   <!-- End Navbar -->
 
-
   <body style="background-color:#1d0536;">
       <div id="stars"></div>
       <div id="stars2"></div>
@@ -479,20 +486,30 @@ footer {
           <div class="col px-0">
             <div class="row align-items-center justify-content-center">
               <div class="col-lg-6 text-center">
-                <h1 style="height:80px;"> </h1>
+
+                <h1 style="height:10px;"> </h1>
 
                 <img src="https://docs.google.com/drawings/d/e/2PACX-1vTrGJOijeGoSmLLhIHWO5YZslbuT0qOlXeCSZ5cJNJbmbuMD2Fnxl7WKVfWF1wmYt-Bs4c-kQhFL5qt/pub?w=1128&amp;h=336">
                 <p class="lead text-white">Study & do homework in a healthy, effective, & fun way.</p>
                 <div class="btn-wrapper mt-5">
 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 <!--nav-->
-                  <button type="button" class="btn btn-info btn-lg">Do Homework</button>
-      <button type="button" class="btn btn-warning btn-lg">Study With StudyBots</button>
 
-<div style="height:30px"></div>
-
-      <div class="dropdown">
-        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<center>
+     <a href="https://sprz05.github.io/ITHIB_v1.0/"> <button type="button" class="btn btn-info btn-lg" style="height:100px; width:400px;">Do Homework</button> </a>
+     <a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html">
+      <button type="button" class="btn btn-warning btn-lg" style="height:100px; width:400px;">Study With StudyBots</button>
+    </a>
+<div style="height:50px"></div>
+           <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Use a Specific Bot
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -501,7 +518,15 @@ footer {
           <a class="dropdown-item" href="afterHWBots.html">For Afer Homework</a>
         </div>
       </div>
-      <!--nav-->
+</center>
+
+<div style="height:50px"></div>
+
+
+
+
+<!--End of convery belt-->
+
 
                   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -845,6 +870,89 @@ window.TrackJS &&
     token: "ee6fab19c5a04ac1a32a645abde4613a",
     application: "argon-design-system-pro"
   });
+</script>
+
+<script type="text/javascript">
+  class Package {
+    constructor(el, parent){
+        this.element = el;
+        this.parent = parent;
+        this.element.addEventListener("animationend", (e)=>{
+            this.element.classList.remove('moving');
+        }, false);
+    }
+    loop = () => {
+        this.element.classList.add('moving');
+        this.parent.prepend(this.element);
+    }
+}
+
+const createPackages = (parentclass) => {
+    let packagearray=[];
+    let packages = document.querySelector(`${parentclass}`);
+    packages.querySelectorAll('li').forEach((el) => {
+      packagearray.push(new Package(el, packages));
+    });
+    return packagearray;
+}
+
+class ConveyorBelt{
+    constructor(packagequeue){
+        this.queue = packagequeue.slice();
+        this.counter = 0;
+        this.increment = 200;
+        this.on = false;
+        this.request = ()=>{window.requestAnimationFrame(this.handleTick.bind(this))};
+    }
+    handleTick(){
+        if(this.on){
+            if(this.counter === 0) this.loopQueue();
+            this.incrementCounter();
+            this.request();
+        }
+    }
+
+    incrementCounter(){
+        if(this.counter < this.increment){
+            this.counter++;
+        }else{
+            this.counter = 0;
+        }
+    }
+
+    loopQueue(){
+        let pkg = this.queue.pop();//last one ~ first one 'in'.
+        this.queue.splice(0,0,pkg);//insert at beginning of array.
+        pkg.loop();
+    }
+
+    start(){
+        this.request();
+        this.on = true;
+    }
+    stop(){
+        this.on = false;
+    }
+}
+
+const handleToggleButton = (e) => {
+    e.currentTarget.classList.toggle('stopped');
+    if(e.currentTarget.classList.contains('stopped')){
+        //stop assembly line.
+        conveyorBelt.stop();
+        wrapper.classList.add('paused');
+    }else{
+        //start assembly line.
+        conveyorBelt.start();
+        wrapper.classList.remove('paused');
+    }
+}
+
+var toggleButton = document.getElementById('toggleButton');
+var wrapper = document.querySelectorAll('.wrapper')[0];
+var conveyorBelt = new ConveyorBelt(createPackages('.packages'));
+toggleButton.addEventListener('click',handleToggleButton);
+
 </script>
 </body>
 
