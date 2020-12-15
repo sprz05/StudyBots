@@ -338,7 +338,8 @@ footer {
   <!-- CSS Files -->
   <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="assets\css\background.css">
-<link rel="stylesheet" type="text/css" href="convery.css">
+  <link rel="stylesheet" type="text/css" href="convery.css">
+  <link rel="stylesheet" type="text/css" href="slider.css">
 
 </head>
 
@@ -767,6 +768,100 @@ function closeNav() {
 <!--end of form-->
 
 
+<div class="container text-center my-3">
+<h1 style="margin-left: -700px; color:white"><b>All Bots:</b></h1>
+
+    <div class="row mx-auto my-auto">
+        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+                
+
+                <div class="carousel-item active">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                          <a type="button" href="https://sprz05.github.io/HOBv1.0/" data-toggle="popover" title="HOB" data-content="Organize your homework assignments and get ready to do some homework">
+                            <img class="img-fluid" src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=621&amp;h=626">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                          <a type="button" href="https://sprz05.github.io/ITHIB_v1.0/ITHB.html" data-toggle="popover" title="ITHB" data-content="Use ITHB to remind you to take brain breaks!">
+                            <img class="img-fluid" src="https://docs.google.com/drawings/d/e/2PACX-1vSQghAOBmgnQoBekzmhYYyurC4toECZYwmwGn4sl_MdPHwzcPx_vdnTYcZkH4mn7YQ9CsZKUNNhrx5d/pub?w=414&amp;h=418">
+                          </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                          <a type="button" href="https://sprz05.github.io/SLAB_v1.0/" data-toggle="popover" title="SLAB" data-content="Get or share learning and school advice, tips and tricks.">
+                            <img class="img-fluid" src="https://docs.google.com/drawings/d/e/2PACX-1vRf9fK5NP2GcB1jn5xeDHQsj7Wol4Iw2H56eTbv05BCFN97zlZZJHoSL-gym2owJ1-qJYwwVASlbzb0/pub?w=497&h=411">
+                          </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                          <a type="button" href="" data-toggle="popover" title="WWC" data-content="Join after school clubs, from art to programming! If you don't see anthing you like you can make your own club!">
+                            <img class="img-fluid" src="https://docs.google.com/drawings/d/e/2PACX-1vQfTUaRBBN2j6OJMAtojBIGzx_4R2kvwJQd6TkWZewXdfB09QJtuL4vQ2RUV_10ZIl2IKAEs3RsPEGK/pub?w=300&amp;h400">
+                          </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                          <a type="button" href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" data-toggle="popover" title="ITHBTestCam" data-content="Study for a test with ITHB! Note only work with printed worksheets">
+                            <img class="img-fluid" src="https://docs.google.com/drawings/d/e/2PACX-1vT7ubJEQgmW4tg3Vi6Duj0h9wPU9dBuDXVMp7Uasli5rFZ6B8ndw9kqcrT4CNaIebP0XKnRDdCZhhWT/pub?w=496&h=500">
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+  $('#recipeCarousel').carousel({
+  interval: 10000
+})
+
+$('.carousel .carousel-item').each(function(){
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (var i=0;i<minPerSlide;i++) {
+        next=next.next();
+        if (!next.length) {
+          next = $(this).siblings(':first');
+        }
+        
+        next.children(':first-child').clone().appendTo($(this));
+      }
+});
+</script>
+
+
 
 <p style="height:100px;"></p>
 
@@ -782,13 +877,13 @@ function closeNav() {
     </div>
     <div class="column-66">
       <h1 class="large-font" style="color:#1d347bff;"><b>HOB</b></h1>
-      <p>Hob a simple robot here to help organizes your homework!</p>
-      <p>Use HOB while your doing homework.</p>
+      <p>Hob is a simple robot here to help organizes your homework!</p>
 
       <a href="https://sprz05.github.io/HOBv1.0/" target="_blank" class="btn btn-primary" style="color:white;">Go to HOB</a>
     </div>
 
   </div>
+  <bold><p>Skill: To Do List</p></bold>
   <span class="badge badge-primary">Effective</span>
 
 </div>
@@ -801,13 +896,14 @@ function closeNav() {
           <div class="row">
             <div class="column-66">
         <h1 class="large-font" style="color:#0c0c2fff;"><b>ITHB</b></h1>
-              <p>Use ITHB while your doing homework. He'll help remind you to take brain breaks to recharge and stay more on task.</p>
-            <a href="https://sprz05.github.io/ITHIB_v1.0/" class="btn btn-primary" style="color:white;" target="_blank">Go to ITHB</a>
+              <p>ITHB helps remind you to take brain breaks to recharge and stay more on task.</p>
+            <a href="https://sprz05.github.io/ITHIB_v1.0/ITHB.html" class="btn btn-primary" style="color:white;" target="_blank">Go to ITHB</a>
           </div>
             <div class="column-33">
         <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQghAOBmgnQoBekzmhYYyurC4toECZYwmwGn4sl_MdPHwzcPx_vdnTYcZkH4mn7YQ9CsZKUNNhrx5d/pub?w=414&amp;h=418">
             </div>
         </div>
+        <bold><p>Habit: Brain Breaks</p></bold>
         <span class="badge badge-success">Healthy</span>
         <span class="badge badge-primary">Effective</span>
         <span class="badge badge-danger">Fun</span>
@@ -822,7 +918,7 @@ function closeNav() {
           <div class="row">
             <div class="column-66">
         <h1 class="large-font" style="color:#0c0c2fff;"><b>SLAB</b></h1>
-        <p>SLAB aims to help make school, longer homework assignments, and homework, in general, be less stressful. It shares tricks,tips and resources from students!</p>
+        <p>SLAB shares school and homework advice, tips and resources from students!</p>
         <p>Use SLAB when you need or want to share some advice/work for school.</p>
         <a href="https://sprz05.github.io/SLAB_v1.0/" target="_blank" class="btn btn-primary" style="color:white;">Go to SLAB</a>
       </div>
@@ -830,6 +926,7 @@ function closeNav() {
               <img src="https://docs.google.com/drawings/d/e/2PACX-1vRDOXNgmwL7aA99-gaOMVjOMiQUzaCVnUl3h2u3H01q1RRiR5jKn4lJJ1lEoy6io1inxtufby6MULGh/pub?w=524&amp;h=514">
             </div>
         </div>
+        <bold><p>Skill: Learning Mindset</p></bold>
         <span class="badge badge-success">Healthy</span>
         <span class="badge badge-primary">Effective</span>
 
