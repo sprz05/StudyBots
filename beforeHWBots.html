@@ -27,16 +27,154 @@
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets\css\background.css">
+
 </head>
 
-<body>
+  <body class=""  style="background: linear-gradient(100deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+  <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Study Bots</a>
+      <a class="navbar-brand mr-lg-5" href="https://sprz05.github.io/StudyBots/index.html" target="_blank">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vQRLWChs7-u7gFu9-djXGCyCxvHTgF8HjNqq9DecZjKUy2Dl5mg3HHhEtVhy6Oz88NGmlLZKtsUTxiv/pub?w=376&amp;h=112">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="./index.html">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQ6FR7uN3QiqiKp6ieGISgrAv22clfRbkwUsTql33XBBz323MLMV7KZ9L0KJqmSOzxrXnVngATaowMg/pub?w=752&amp;h=224">              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+<i class="fas fa-robot"></i>
+              <span class="nav-link-inner--text">Bots</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-xl">
+              <div class="dropdown-menu-inner">
+
+                <a href="https://sprz05.github.io/StudyBots/beforeHWBots.html" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+<i class="fas fa-arrow-left"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">Before Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots for before you start homework</p>
+                  </div>
+                </a>
+
+                <a href="https://sprz05.github.io/StudyBots/duringHWBots.html" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                    <i class="ni pencil-ruler"></i>
+                    <i class="fas fa-pencil-ruler"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">During Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots that help you during homework.</p>
+                  </div>
+                </a>
+
+
+                <a href="https://sprz05.github.io/StudyBots/afterHWBots.html" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                    <i class="ni ni-palette"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">After Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots that provdie programs when your done with homework as a reward!</p>
+                  </div>
+                </a>
+
+
+                 <a href="https://sprz05.github.io/Study-BotMaker/" class="nav-link"  role="button" >
+                     <i class="fas fa-envelope-open-text"></i>
+                    <span class="nav-link-inner--text">Make a Study Bot</span>
+                  </a>
+
+                 <a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" class="nav-link" href="#" role="button">
+                    <i class="fas fa-info-circle"></i>
+                   <span class="nav-link-inner--text">Study Mode</span>
+                 </a>
+
+
+              </div>
+
+              </div>
+
+
+
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="https://sprz05.github.io/StudyBots/newBots.html" role="button">
+                <i class="fas fa-star"></i>
+              <span class="nav-link-inner--text">New Bots</span>
+            </a>
+          </li>
+
+          <!--other servicies FUTURE -->
+          <li class="nav-item dropdown" style="display:none">
+            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+              <i class="ni ni-collection d-lg-none"></i>
+              <span class="nav-link-inner--text">Tutors</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="dropdown-item">Math Help</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="https://sprz05.github.io/StudyBots/contribute.html" class="nav-link" role="button">
+              <i class="ni ni-collection d-lg-none"></i>
+              <span class="nav-link-inner--text">Contribute</span>
+            </a>
+          </li>
+
+
+        </ul>
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+
+
+           <a href="https://sprz05.github.io/Study-BotMaker/"  class="btn btn-danger btn-icon">
+              <span class="btn-inner--icon">
+
+              </span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
+            </a>
+
+
+            <a href="about.html" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+              </span>
+              <span class="nav-link-inner--text">about</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
+  <!-- End Navbar -->
+
+    <div style="height: 100px"></div>
+
 
   <!-- Page Content -->
   <div class="container">
@@ -59,7 +197,7 @@
 
           <div class="card-body">
             <h4 class="card-title">HOB</h4>
-            <p class="card-text">Organize your homework with HOB then head over to ITHB!</p>
+            <p class="card-text">Organize your homework into to do list for the day with HOB</p>
           </div>
           <div class="card-footer">
             <a href="https://sprz05.github.io/HOBv1.0/" class="btn btn-primary">HOB</a>
@@ -67,8 +205,54 @@
         </div>
       </div>
 
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vTYLdo_kc0zshXvkJN7x_Ts7KLF4iUAryWlrus4ijDh7JJNviHc8eMCp3kH241qdbgVkGsghxRYnRd-/pub?w=499&h=554">
+
+          <div class="card-body">
+            <h4 class="card-title">PHOB</h4>
+            <p class="card-text">Organize long assignments or project to dos with PHOB</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://sprz05.github.io/Project-HOB/" class="btn btn-primary">PHOB</a>
+          </div>
+        </div>
+      </div>
 
       <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vSMsuI6Xo_xVRKBKcTa_LsYjlXEPe_zlH9kdbGMb8phejW9m4MZdpci1hSob-bq03bXkGGTNKT2YtJ0/pub?w=626&h=626">
+
+          <div class="card-body">
+            <h4 class="card-title">WHOB</h4>
+            <p class="card-text">Organize all your homework for the week with this WHOB!</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://sprz05.github.io/SCHEDULE_MAKER/" class="btn btn-primary">WHOB</a><!--------get link!!!---->
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vQWWjXiTCBr9uSUDhz-TBG2g_yH7RtfM0HqQtq9DBYPjL3BpEFPo7lr5v7ATFAOLBTgbWs7-LGpgXJE/pub?w=960&h=720">
+
+          <div class="card-body">
+            <h4 class="card-title">HBB</h4>
+            <p class="card-text">Put your homework assignments onto a bingo sheet!</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://sprz05.github.io/ITHIB_v1.0/bingoBot9.html" class="btn btn-primary">HBB</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+
+          <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <h4 class="card-title">More coming soon</h4>
@@ -80,19 +264,8 @@
         </div>
       </div>
 
-    </div>
-    <!-- /.row -->
-
   </div>
   <!-- /.container -->
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Study Bots | <a href="https://sprz05.github.io/">sprz05</a></p>
-    </div>
-    <!-- /.container -->
-  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
