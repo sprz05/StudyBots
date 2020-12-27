@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+  </head>
+
+
+    /*navBar*/
+    * {box-sizing: border-box;}
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+
+
+  /*navBar*/
+  * {box-sizing: border-box;}
+
+  body {
+    height: 100%
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+
+  .navBar {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .navBar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+  .navBar a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .navBar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navBar a.active {
+    background-color: #0d0833;
+    color: white;
+  }
+
+  .navBar-right {
+    float: right;
+  }
+
+  @media screen and (max-width: 500px) {
+    .navBar a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    .navBar-right {
+      float: none;
+    }
+  }
+
+
+  /*title/slideshow*/
+  .button {
+    background-image: linear-gradient(to right, #24184bff 0%, #47377dff 100%);
+    border-radius: 6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+
+
+
+  /* Header/Logo Title */
+
+
+  .subtitle{
+    font-size: 30px
+  }
+
+  /* Page Content */
+  .content {padding:20px;}
+
+
+  .topnav {
+    overflow: hidden;
+    background-color: #150f36ff;
+  }
+
+  .topnav a {
+    float: left;
+    color: #cceeffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #cceeffff;
+    color: black;
+  }
+
+  .topnav a.active {
+
+    color: white;
+  }
+
+  * {
+    box-sizing:border-box;
+  }
+
+
+  .container {
+    padding: 64px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+
+  .column-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+  }
+
+  .column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+  }
+
+  .large-font {
+    font-size: 48px;
+  }
+
+  .xlarge-font {
+    font-size: 64px
+  }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    box-shadow: 2px 2px 5px grey;
+  font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin: auto;
+    }
+  }
+
+  /*slideshow*/
+  * {box-sizing: border-box}
+  body {font-family: 'Roboto', sans-serif; margin:0}
+
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+  }
+
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+
+  /* The dot/bullet/indicator container */
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+
+  /*image buttons*/
+  * {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .img{
+   box-shadow: 10px 10px 5px grey;
+   height: 50%;
+   width: 50%;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+
+
+  /*footer*/
+
+  .footer{
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     color: grey;
+     text-align: center;
+
+  }
+
+  </style>
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+   <link rel="stylesheet" type="text/css" href="assets\css\background.css">
+</head>
+
+<body class="index-page">
+   <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+    <div class="container">
+      <a class="navbar-brand mr-lg-5" href="https://sprz05.github.io/StudyBots/index.html" target="_blank">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vQRLWChs7-u7gFu9-djXGCyCxvHTgF8HjNqq9DecZjKUy2Dl5mg3HHhEtVhy6Oz88NGmlLZKtsUTxiv/pub?w=376&amp;h=112">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="./index.html">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQ6FR7uN3QiqiKp6ieGISgrAv22clfRbkwUsTql33XBBz323MLMV7KZ9L0KJqmSOzxrXnVngATaowMg/pub?w=752&amp;h=224">              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+<i class="fas fa-robot"></i>
+              <span class="nav-link-inner--text">Bots</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-xl">
+              <div class="dropdown-menu-inner">
+
+                <a href="https://sprz05.github.io/StudyBots/beforeHWBots.html" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+<i class="fas fa-arrow-left"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">Before Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots for before you start homework</p>
+                  </div>
+                </a>
+
+                <a href="https://sprz05.github.io/StudyBots/duringHWBots.html" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                    <i class="ni pencil-ruler"></i>
+                    <i class="fas fa-pencil-ruler"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">During Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots that help you with homework.</p>
+                  </div>
+                </a>
+
+
+                <a href="https://sprz05.github.io/StudyBots/afterHWBots.html" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                    <i class="ni ni-palette"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">After Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots that provdie programs when your done with homework as a reward!</p>
+                  </div>
+                </a>
+
+
+                 <a href="https://sprz05.github.io/Study-BotMaker/" class="nav-link"  role="button" >
+                     <i class="fas fa-envelope-open-text"></i>
+                    <span class="nav-link-inner--text">Make a Study Bot</span>
+                  </a>
+
+                 <a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" class="nav-link" href="#" role="button">
+                    <i class="fas fa-info-circle"></i>
+                   <span class="nav-link-inner--text">Study Mode</span>
+                 </a>
+
+
+              </div>
+
+              </div>
+
+
+
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="https://sprz05.github.io/StudyBots/newBots.html" role="button">
+                <i class="fas fa-star"></i>
+              <span class="nav-link-inner--text">New Bots</span>
+            </a>
+          </li>
+
+          <!--other servicies FUTURE -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+              <i class="ni ni-collection d-lg-none"></i>
+              <span class="nav-link-inner--text">Tutors</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="dropdown-item">Math Help</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="https://sprz05.github.io/StudyBots/contribute.html" class="nav-link" role="button">
+              <i class="ni ni-collection d-lg-none"></i>
+              <span class="nav-link-inner--text">Contribute</span>
+            </a>
+          </li>
+
+
+        </ul>
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+
+
+           <a href="https://sprz05.github.io/Study-BotMaker/" class="btn btn-danger btn-icon">
+              <span class="btn-inner--icon">
+
+              </span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
+            </a>
+
+
+            <a href="about.html" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+              </span>
+              <span class="nav-link-inner--text">about</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  
+  <div class="wrapper">
+    <div class="section section-hero section-shaped">
+      <div class="shape shape-style-1 shape-primary">
+      </div>
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+
+      <div class="page-header">
+        <div class="container shape-container d-flex align-items-center py-lg">
+          <div class="col px-0">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-lg-6 text-center">
+
+                <div style="height:50px"></div>
+                <h1 style="font-size:90px; color:white;"><b>About</b></h1>
+
+                <div class="btn-wrapper mt-5">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+    <div class="section section-components pb-0" id="section-components">
+      <div>
+        <center><h3 style="color:gray">About Bots</h3></center>
+       <p> </p>
+      </div>
+
+
+<!--about bots-->
+
+      <div class="container">
+  <div class="row">
+    <div class="col-sm" style="background-color:#f1f1f1; border-radius: 10px;">
+      <center>
+      <span><h1><strong>ITHB</strong></h1></span>
+      <p></p>
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQghAOBmgnQoBekzmhYYyurC4toECZYwmwGn4sl_MdPHwzcPx_vdnTYcZkH4mn7YQ9CsZKUNNhrx5d/pub?w=300&amp;h=300">
+      <p></p>
+      <p></p>
+
+         <button type="button" onclick="showAboutITHB()" class="btn btn-block  btn btn-primary mb-3" data-toggle="modal" data-target="#modal-default">Learn more</button>
+         <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+           <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+             <div class="modal-content" id="aboutITHB">
+               <div class="modal-header">
+                 <h6 class="modal-title" id="modal-title-default">About ITHB</h6>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">×</span>
+                 </button>
+               </div>
+               <div class="modal-body">
+                 <p>ITHB Helps remind students to take brain breaks! Breaks are an essential part of learning. They help students decrease stress, increase productivity, and boost brain function. </p>
+                 <p>Tip: We recommend you use HOB with ITHB. HOB will help organize your homework and ITHB will help you get through your homework.</p>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+               </div>
+             </div>
+           </div>
+         </div>
+    </center>
+    </div>
+    <p></p>
+    <div class="col-sm" style="background-color:#f1f1f1; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+      <center>
+      <span><h1><strong>HOB</strong></h1></span>
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=524&amp;h=514">
+      <p></p>
+      <p></p>
+      <button type="button" onclick="showAboutHOB()" class="btn btn-block  btn btn-info mb-3" data-toggle="modal" data-target="#about-HOB">Learn more</button>
+      <div class="modal fade" id="about-HOB" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+          <div class="modal-content" id="aboutHOB">
+            <div class="modal-header">
+              <h6 class="modal-title" id="modal-title-default">About HOB</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>HOB is a simple robot that helps students organize their homework into "blocks". Sort of like a to do list. By doing this it'll make your homework assignments less scary. Once you create your homework blocks head over to ITHB! </p>
+              <p>ITHB will help you get through your homework blocks.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </center>
+    </div>
+    <div class="col-sm" style="background-color:#f1f1f1; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+      <center>
+      <span><h1><strong>SLAB</strong></h1></span>
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vRDOXNgmwL7aA99-gaOMVjOMiQUzaCVnUl3h2u3H01q1RRiR5jKn4lJJ1lEoy6io1inxtufby6MULGh/pub?w=524&amp;h=514">
+      <p></p>
+      <button type="button" class="btn btn-block  btn btn-success mb-3" data-toggle="modal" data-target="#aboutSlab">Learn more</button>
+      <div class="modal fade" id="aboutSlab" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+          <div class="modal-content" id="aboutSlab">
+            <div class="modal-header">
+              <h6 class="modal-title" id="aboutSlab">About SLAB</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="aboutSlab">
+              <p>SLAB aims to help make school, longer homework assignments, and homework, in general, be less stressful. The advice and resource section is a place for students to share advice, tips, or resources that they wish they would have known when they ran into some homework or school trouble.</p>
+              <p> If a resource or a piece of advice is popular or helpful it could potentially become a Study Bot or a part of a Study Bot! If you have some advice, tips, or a resource that you want to be posted on our Resource & Advice page, we'd be more than happy to help share it!</p>
+              <p>Email us at studybots1@gmail.com or fill out the form below. Your real name will be kept anonymous unless you'd like us to use a username you make up.</p>
+              <p><button class="btn btn-primary"><a style="color:white" href="https://docs.google.com/forms/d/e/1FAIpQLSdMfUy6L6lcTeJq-u-rPVIzl-CdQy-PTHkzMKLcAI0SzltPtg/viewform?usp=sf_link">fill out form</a></button></p>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </center>
+    </div>
+  </div>
+
+  <p style="height:40px;"> </p>
+
+  <div class="row">
+    <div class="col-sm" style="background-color:#f1f1f1; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+      <center>
+      <span><h1><strong>WWC</strong></h1></span>
+      <p></p>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQfTUaRBBN2j6OJMAtojBIGzx_4R2kvwJQd6TkWZewXdfB09QJtuL4vQ2RUV_10ZIl2IKAEs3RsPEGK/pub?w=241&amp;h=249">
+      <p></p>
+      <button type="button" onclick="showAboutWWC()"class="btn btn-block  btn btn-danger mb-3" data-toggle="modal" data-target="#aboutWWC">Learn more</button>
+      <div class="modal fade" id="aboutWWC" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+          <div class="modal-content" id="aboutWWC">
+            <div class="modal-header">
+              <h6 class="modal-title" id="modal-title-default">About WWC</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>WWC makes school clubs "global", so students can join, see, and partner up with them. If you don't like any of the clubs available you can either purpose your own club and be the president of it or you can make a blank club and just be a member or other role in the club. Join WWC today!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </center>
+    </div>
+    <p></p>
+</div>
+
+
+<!--About team-->
+</br>
+<h1 align="center"><b>Meet the team:</b></h1>
+<center><p>Unhealthy and Ineffective study habits have the potential to make homework sessions stressful, unproductive, and enjoyable. We´re working to make it easier and more fun for students to learn and utilize the benefits of healthy and effective study habits. By taking healthy and effective study habits or skills and turning them into Study Bots! 
+</p></center>
+
+<center>
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <!-- Web Developer -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Sofia Perez</h5>
+          <div class="card-text text-black-50">Founder Developer</div>
+        </div>
+      </div>
+    </div>
+    <!-- Web Developer -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Emma Guardado</h5>
+          <div class="card-text text-black-50">Developer</div>
+        </div>
+      </div>
+    </div>
+    <!-- Web Developer -->
+    <div style="display:none" class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="#" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Team Member</h5>
+          <div class="card-text text-black-50">Web Developer</div>
+        </div>
+      </div>
+    </div>
+    <!-- Animator -->
+    <div style="display:none" class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="#" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Team Member</h5>
+          <div class="card-text text-black-50">Animator</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+  <!-- /.row -->
+
+
+    <div style="height:100px;"></div>
+
+    <!-- Features Section -->
+    <div class="row">
+      <div class="col-lg-6">
+        <h2><b>Impact</b></h2>
+        <p>How Study Bots has helped students.</p>
+      </div>
+      <div class="col-lg-6">
+        <iframe style="width: 100%; height: 400px; border: 0;" src="https://docs.google.com/presentation/d/e/2PACX-1vRHyocRBubch64pJrtVMOwZJ3bNEjQOTaKyNSOnu2mA-seqVoxKbD77OeOdirFabf9_-s2tCSUQLAvW/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div>
+    </div>
+
+
+</div>
+<!-- /.container -->
+
+
+
+  
+  </div>
+
+  <!--Core JS Files-->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="./assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="./assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="./assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+
+  <script>
+    function scrollToDownload() {
+
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+  </script>
+
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
