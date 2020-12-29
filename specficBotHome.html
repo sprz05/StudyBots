@@ -9,6 +9,8 @@
   <meta name="author" content="">
 
   <title>Regular Rountine</title>
+  <!---JS + JQuery Files--->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -176,76 +178,296 @@
 
   <div style="height: 100px"></div>
 
-<center>
-   <header class="jumbotron my-4 btn btn-danger" >
-      <h1 class="display-3">See All Bots</h1>
-    </header>
-</center>
 
   <!-- Page Content -->
   <div class="container">
-
+    <h1 style="color:white"><b>Your Routine:</b></h1>
+ <p style="color:white">A good way to practice habits is to make a routine, we can help you make a schedule from start to finish so you practice 3 study habits and or skills each day!</p>
       <div class="row">
     <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <div class="card-body btn btn-success">
-          <h4 class="card-title">
-            <a href="#" style="color:white">Before Homework Bots</a>
-          </h4>
-          <p class="card-text">All great things start with a plan, our homework organizer bots are here to help you plan out your homework</p>
-        </div>
-      </div>
+      <div class="card h-100" >
+        <div class="card-body btn btn-success" onclick="showBeforeHWBots()">
+          <h4 id="beforeHomeworkUseTxt" style="display:none; color:white"><b>Before Homework use:</b></h4>
+          
+        <a  type="button" data-toggle="popover" title="Click the Bot" data-content="Click me to use this bot">
+          <div id="beforeHWBot">
+            <header>
+            <h4 href="#" style="color:white">1: Choose a bot to use before homework</h4>
+          <h1>+</h1>
+        </header>
+         </div>
+</a>
+       </div>
+               <button style="display:none" id="changeBeforeHWBot" onclick="showBeforeHWBots()" class="btn btn-neutral">Change Bot</button>
+        <button style="display:none" id="cancelChangeBeforeHWBot" onclick="hideBeforeHWBots()" class="btn btn-danger">Cancel</button>
+     </div>
     </div>
+
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <div class="card-body btn btn-info">
+                          <a  type="button" data-toggle="popover" title="Click the Bot" data-content="Click me to use this bot">
+        <div class="card-body btn btn-info" onclick="showDuringHWBots()">
+              <h4 id="duringHWUseTxt"style="display:none; color:white"><b>During Homework use:</b></h4>
+          <div id="duringHWBot">
           <h4 class="card-title">
-            <a href="#" style="color:white">During Homework Bots</a>
+            <a href="#" style="color:white">2: Choose a bot to use during homework</a>
           </h4>
-          <p class="card-text">Study Bots that help make homework time more healthy and effective.</p>
+          <h1>+</h1>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <div class="card-body btn btn-primary">
-          <h4 class="card-title">
-            <a href="#" style="color:white">Project Three</a>
-          </h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-        </div>
+
+        <button style="display:none" id="changeDuringHWBot" onclick="showDuringHWBots()" class="btn btn-neutral">Change Bot</button>
+                      <button style="display:none;" id="cancelChangeDuringHWBot" onclick="hideDuringHWBots()" class="btn btn-danger">Cancel</button>
       </div>
     </div>
 
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body btn btn-danger" onclick="hideAfterHWBots()">                
+        <h4 id="afterHWRewardTxt" style="display:none; color:white"><b>After Homework Reward!:</b></h4>
+          <div id="afterHWBot">
+                    <a  type="button" data-toggle="popover" title="Click the Bot" data-content="Click me to use this bot">
+          <h4 class="card-title">
+            <a href="#" style="color:white">3: Choose a bot to use after homework</a>
+          </h4>
+          <h1>+</h1>
+        </div>
+      </a>
+        </div>
+         <button style="display:none" class="btn btn-neutral" id="changeAfterHWBot" onclick="showAfterHWBots()">Change Bot</button>
+      <button style="display:none" id="cancelChangeAfterHWBot" onclick="hideAfterHWBots()" class="btn btn-danger">Cancel</button>
 
+      </div>
+    </div>
   </div>
   <!-- /.container -->
 
+  <header style="display:none" id="beforeHomewokBots">
+   <!-- Page Features -->
+    <div class="row text-center">
 
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+        
+        <div id="HOBImg" >
+        <a type="button" href="https://sprz05.github.io/HOBv1.0/" data-toggle="popover" title="HOB" data-content="Skill: To Do List">
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=621&amp;h=626">
+        </a>
+
+          <div class="card-body">
+            <h4 class="card-title"><a href="https://sprz05.github.io/HOBv1.0/">HOB</a></h4>
+
+            <p>Organize your homework assignments and get ready to do some homework</p>
+
+            <p>Skill: To Do List</p>
+
+          </div>
+                  </div>  
+
+          <div class="card-footer">
+           
+            <button class="btn btn-primary" id="addHOBBtn" onclick="setAndGetBeforeHomeworkBot()">Add</button>
+
+          </div>
+        </div>
+      </div>
+
+
+            <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+
+          <div id="HBBImg">
+           <a type="button" href="https://sprz05.github.io/ITHIB_v1.0/bingoBot9.html" data-toggle="popover" title="HBB" data-content="Skill: Making homework into a game">
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vQWWjXiTCBr9uSUDhz-TBG2g_yH7RtfM0HqQtq9DBYPjL3BpEFPo7lr5v7ATFAOLBTgbWs7-LGpgXJE/pub?w=960&h=720">
+          </a>
+
+          <div class="card-body">
+            <h4 class="card-title"><a href="https://sprz05.github.io/ITHIB_v1.0/bingoBot9.html">HBB</a></h4>
+            <p>Put your homework assignments onto a bingo sheet!</p>
+          </div>
+          </div>
+          <div class="card-footer">
+           
+            <button id="addHBBtn" class="btn btn-primary" onclick="setAndGetBeforeHomeworkBot()">Add</button>
+
+          </div>
+        </div>
+      </div>
+
+
+                  <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+           <div id="PHOBImg">
+           <a type="button" data-toggle="popover" title="PHOB" data-content="Skill: Making a homework plan">
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vTYLdo_kc0zshXvkJN7x_Ts7KLF4iUAryWlrus4ijDh7JJNviHc8eMCp3kH241qdbgVkGsghxRYnRd-/pub?w=499&h=554">
+        </a>
+
+          <div class="card-body">
+            <h4 class="card-title"><a href="https://sprz05.github.io/Project-HOB/">PHOB</a></h4>
+            <p>Organize long assignments or project to dos with PHOB</p>
+          </div>
+                </div>
+
+          <div class="card-footer">
+           
+            <button id="addPHOBtn" class="btn btn-primary"  onclick="setAndGetBeforeHomeworkBot()">Add</button>
+
+          </div>
+        </div>
+      </div>
+
+                  <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div Id="WHOBImg">
+           <a type="button" href="https://sprz05.github.io/SCHEDULE_MAKER/" data-toggle="popover" title="HOB" data-content="Skill: Making homework into a game">
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vSMsuI6Xo_xVRKBKcTa_LsYjlXEPe_zlH9kdbGMb8phejW9m4MZdpci1hSob-bq03bXkGGTNKT2YtJ0/pub?w=626&h=626">
+        </a>
+          <div class="card-body">
+            <h4 class="card-title"><a href="https://sprz05.github.io/SCHEDULE_MAKER/">WHOB</a></h4>
+            <p>Organize all your homework for the week with WHOB!</p>
+          </div>
+                </div>
+
+          <div class="card-footer">
+           
+            <button id="addWHOBtn" class="btn btn-primary"  onclick="setAndGetBeforeHomeworkBot()">Add</button>
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+</header>
+   <!-- /.row -->
+
+<header id="duringHomewokBots" style="display:none">
+<div class="row text-center">
+
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+
+          <a type="button" href="https://sprz05.github.io/ITHIB_v1.0/" data-toggle="popover" title="ITHB" data-content="Habit: Brain Breaks">
+
+
+          <div id="ITHBImg">
+          <a  type="button" href="https://sprz05.github.io/ITHIB_v1.0/" data-toggle="popover" title="ITHB" data-content="Use ITHB to remind you to take brain breaks!">
+
+          <img href="https://sprz05.github.io/ITHIB_v1.0/ITHB.html" class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vSQghAOBmgnQoBekzmhYYyurC4toECZYwmwGn4sl_MdPHwzcPx_vdnTYcZkH4mn7YQ9CsZKUNNhrx5d/pub?w=414&amp;h=418">
+          <div class="card-body">
+          </a>
+        </div>
+            <h4 class="card-title"><a href="https://sprz05.github.io/ITHIB_v1.0/index.html">ITHB</a></h4>
+
+            <p>Use ITHB to remind you to take brain breaks!</p>
+
+            <p>Habit: Brain Breaks</p>
+
+          </div>
+          <div class="card-footer">
+            <button id="addITHBBtn" class="btn btn-primary" onclick="setAndGetDuringHomeworkBot()">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+
+          <div id="ITHBCamImg">
+          <a type="button" href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" data-toggle="popover" title="ITHBTestCam" data-content="Skill: Reflection">
+
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vQgeDs8O3lBSuvsxIaqXkAmmIqAWy7InslJOv_JCi0Q6V1OCF8Qit71TtNJ0IWobFAhhIn100oZ78C8/pub?w=300&amp;h=200">
+        </a>
+          <div class="card-body">
+            <h4 class="card-title"><a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html">ITHBTest</a></h4>
+
+            <p>Study for a test with ITHB! Note only work with printed worksheets</p>
+                        <p>Skill: Reflection</p>
+
+          </div>
+                </div>
+          <div class="card-footer">
+            <button id="addITHBCamBtn" onclick="setAndGetDuringHomeworkBot()" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</header>
+
+    <!-- /.row -->
+<script>
+  function showAfterHWBots(){
+  document.getElementById("afterHomewokBots").style.display = "block";
+  document.getElementById("cancelChangeAfterHWBot").style.display = "block";
+  document.getElementById("changeAfterHWBot").style.display = "none";
+} 
+
+function hideAfterHWBots(){
+  document.getElementById("afterHomewokBots").style.display = "none";
+  document.getElementById("cancelChangeAfterHWBot").style.display = "none";
+  document.getElementById("changeAfterHWBot").style.display = "block";
+} 
+</script>
+
+ <!-- Page Features -->
+  <header id="afterHomewokBots" style="display:none">  
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          
+          <div id="WWCImg">
+          <a href="https://the-programmingclub.github.io/World-Wide-Clubs/">
+          <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vQfTUaRBBN2j6OJMAtojBIGzx_4R2kvwJQd6TkWZewXdfB09QJtuL4vQ2RUV_10ZIl2IKAEs3RsPEGK/pub?w=241&amp;h=249">
+          </a>
+
+          <div class="card-body">
+            <h4 class="card-title"><a href="https://the-programmingclub.github.io/World-Wide-Clubs/">WWC</a></h4>
+            <p class="card-text">After school clubs, activites and projects made by students!</p>
+          </div>
+          </div>
+
+          <div class="card-footer">
+            <button id="addWWWBtn" onclick="setAndGetAfterHomeworkBot()" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+
+          <div id="GameImg">
+            <a href="https://sprz05.github.io/ITHIB_v1.0/game.html"><img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vSikR-EfX5noiig1GAF1Pf1MhhZnf7URxPeNoTCNmFGm2Zv48HbAdQUb27q0hcHgq_wW1_amEVz9iis/pub?w=960&amp;h=720">
+            <h4><a href="https://sprz05.github.io/ITHIB_v1.0/game.html">Play Games<a><h4>
+
+            <p class="card-text" style="color:white">Play games online as a reward after homework!</p>
+
+          </div>
+                    </div>
+
+          <div class="card-footer">
+
+            <button id="addGameBtn" onclick="setAndGetAfterHomeworkBot()" class="btn btn-primary">Add</button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+
+</body>
   <!-- Page Content -->
-  <div class="container">
-
-    <!-- Jumbotron Header -->
- 
-
-  </div>
-  <!-- /.container -->
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p class="m-0 text-center text-white">Study Bots | <a href="https://sprz05.github.io/">sprz05</a></p>
-    </div>
-    <!-- /.container -->
-  </footer>
+</html>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</body>
-
-</html>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -258,4 +480,133 @@ $(document).ready(function(){
         trigger : 'hover'
     });
 });
+
+function setAndGetBeforeHomeworkBot(){
+ var beforeBotBtn = event.target.id; 
+ var HOBImg = document.getElementById("HOBImg").innerHTML;
+ var HBBImg = document.getElementById("HBBImg").innerHTML;
+ var PHOBImg = document.getElementById("PHOBImg").innerHTML;
+ var WHOBImg = document.getElementById("WHOBImg").innerHTML;
+
+ if(beforeBotBtn == "addHOBBtn"){
+    document.getElementById("beforeHWBot").innerHTML = HOBImg;
+    localStorage.setItem('beforeHWBot',  document.getElementById("beforeHWBot").innerHTML);
+    hideBeforeHWBots()
+ } else if (beforeBotBtn == "addHBBtn"){
+    document.getElementById("beforeHWBot").innerHTML = HBBImg;
+    localStorage.setItem('beforeHWBot',  document.getElementById("beforeHWBot").innerHTML);
+    hideBeforeHWBots()
+ } else if (beforeBotBtn == "addPHOBtn"){
+    document.getElementById("beforeHWBot").innerHTML = PHOBImg;
+        localStorage.setItem('beforeHWBot',  document.getElementById("beforeHWBot").innerHTML);
+        hideBeforeHWBots()
+} else if (beforeBotBtn == "addWHOBtn"){
+  document.getElementById("beforeHWBot").innerHTML = WHOBImg;
+      localStorage.setItem('beforeHWBot',  document.getElementById("beforeHWBot").innerHTML);
+      hideBeforeHWBots();
+}
+    document.getElementById("beforeHomeworkUseTxt").style.display = "block";
+
+}
+
+function setAndGetDuringHomeworkBot(){
+ var beforeBotBtn = event.target.id; 
+ var ITHBImg = document.getElementById("ITHBImg").innerHTML;
+ var ITHBCamImg = document.getElementById("ITHBCamImg").innerHTML;
+
+ if(beforeBotBtn == "addITHBBtn"){
+    document.getElementById("duringHWBot").innerHTML = ITHBImg;
+    localStorage.setItem('duringHWBot',  document.getElementById("duringHWBot").innerHTML);
+    hideDuringHWBots()
+ } else if (beforeBotBtn == "addITHBCamBtn"){
+    document.getElementById("duringHWBot").innerHTML = ITHBCamImg;
+    localStorage.setItem('duringHWBot',  document.getElementById("duringHWBot").innerHTML);
+    hideDuringHWBots()
+ } 
+     document.getElementById("duringHWUseTxt").style.display = "block";
+}
+
+function setAndGetAfterHomeworkBot(){
+ var beforeBotBtn = event.target.id; 
+ var WWCImg = document.getElementById("WWCImg").innerHTML;
+ var GameImg = document.getElementById("GameImg").innerHTML;
+
+   if(beforeBotBtn == "addWWWBtn"){
+    document.getElementById("afterHWBot").innerHTML = WWCImg;
+    localStorage.setItem('afterHWBot',  document.getElementById("afterHWBot").innerHTML);
+    hideAfterHWBots()
+ } else if (beforeBotBtn == "addGameBtn"){
+    document.getElementById("afterHWBot").innerHTML = GameImg;
+    localStorage.setItem('afterHWBot',  document.getElementById("afterHWBot").innerHTML);
+    hideAfterHWBots()
+ }
+     document.getElementById("afterHWRewardTxt").style.display = "block";
+}
+
+// local storage 
+window.addEventListener('load', (event) => {
+  getAndSetBeforeHWBot();
+  getAndSetDuringHWBot();
+  getAndSetAfterHWBot();
+});
+
+function getAndSetBeforeHWBot(){
+  var beforeHWBot = localStorage.getItem('beforeHWBot');
+  if(beforeHWBot == null){
+    console.log("Welcome!");
+  } else {
+      document.getElementById("beforeHomeworkUseTxt").style.display = "block";
+      document.getElementById("changeBeforeHWBot").style.display = "block";
+      document.getElementById("beforeHWBot").innerHTML = localStorage.getItem('beforeHWBot');
+  }
+}
+
+function getAndSetDuringHWBot(){
+  var duringHWBot = localStorage.getItem('duringHWBot');
+  if(duringHWBot == null){
+    console.log("Welcome!");
+  } else {
+      document.getElementById("duringHWUseTxt").style.display = "block";
+      document.getElementById("changeDuringHWBot").style.display = "block"
+      document.getElementById("duringHWBot").innerHTML = localStorage.getItem('duringHWBot');
+  }
+}
+
+function getAndSetAfterHWBot(){
+  var afterHWBot = localStorage.getItem('afterHWBot');
+  if(afterHWBot == null){
+    console.log("Welcome!");
+  } else {
+      document.getElementById("afterHWRewardTxt").style.display = "block";
+      document.getElementById("changeAfterHWBot").style.display = "block";
+      document.getElementById("afterHWBot").innerHTML = localStorage.getItem('afterHWBot');
+  }
+}
+
+
+function showBeforeHWBots(){
+  document.getElementById("beforeHomewokBots").style.display = "block";
+  document.getElementById("cancelChangeBeforeHWBot").style.display = "block";
+  document.getElementById("changeBeforeHWBot").style.display = "none";
+} 
+
+function hideBeforeHWBots(){
+  document.getElementById("beforeHomewokBots").style.display = "none";
+  document.getElementById("cancelChangeBeforeHWBot").style.display = "none";
+  document.getElementById("changeBeforeHWBot").style.display = "block";
+}
+
+function showDuringHWBots(){
+  document.getElementById("duringHomewokBots").style.display = "block";
+  document.getElementById("cancelChangeDuringHWBot").style.display = "block";
+  document.getElementById("changeDuringHWBot").style.display = "none";
+} 
+
+function hideDuringHWBots(){
+  document.getElementById("duringHomewokBots").style.display = "none";
+  document.getElementById("cancelChangeDuringHWBot").style.display = "none";
+  document.getElementById("changeDuringHWBot").style.display = "block";
+
+} 
+
 </script>
