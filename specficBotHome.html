@@ -184,7 +184,7 @@
     <h1 style="color:white"><b>Your Routine:</b></h1>
  <p style="color:white">A good way to practice habits is to make a routine, we can help you make a schedule from start to finish so you practice 3 study habits and or skills each day!</p>
  <p style="color:white"><b>Don't know which bot to use? Use our goal bot to help you decide!</b></p>
-    <a href="https://sprz05.github.io/ITHIB_v1.0/goalBotMain.html"><button style="color:white" class="btn bg-gradient-success">Sure!</button></a>
+    <a href="https://sprz05.github.io/ITHIB_v1.0/goalBotMain.html"><button style="color:white" class="btn btn-danger">Sure!</button></a>
     <h1 style="height:20px"></h1>
 
       <div class="row">
@@ -203,7 +203,7 @@
 </a>
        </div>
                <button style="display:none" id="changeBeforeHWBot" onclick="showBeforeHWBots()" class="btn btn-neutral">Change Bot</button>
-        <button style="display:none" id="cancelChangeBeforeHWBot" onclick="hideBeforeHWBots()" class="btn btn-danger">Cancel</button>
+        <button style="display:none" id="cancelChangeBeforeHWBot" onclick="hideBeforeHWBots()" class="btn btn-danger">Close</button>
      </div>
     </div>
 
@@ -221,13 +221,13 @@
         </div>
 
         <button style="display:none" id="changeDuringHWBot" onclick="showDuringHWBots()" class="btn btn-neutral">Change Bot</button>
-                      <button style="display:none;" id="cancelChangeDuringHWBot" onclick="hideDuringHWBots()" class="btn btn-danger">Cancel</button>
+                      <button style="display:none;" id="cancelChangeDuringHWBot" onclick="hideDuringHWBots()" class="btn btn-danger">Close</button>
       </div>
     </div>
 
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <div class="card-body btn btn-danger" onclick="hideAfterHWBots()">                
+        <div class="card-body btn btn-danger" onclick="showAfterHWBots()">                
         <h4 id="afterHWRewardTxt" style="display:none; color:white"><b>After Homework Reward!:</b></h4>
           <div id="afterHWBot">
                     <a  type="button" data-toggle="popover" title="Click the Bot" data-content="Click me to use this bot">
@@ -239,7 +239,7 @@
       </a>
         </div>
          <button style="display:none" class="btn btn-neutral" id="changeAfterHWBot" onclick="showAfterHWBots()">Change Bot</button>
-      <button style="display:none" id="cancelChangeAfterHWBot" onclick="hideAfterHWBots()" class="btn btn-danger">Cancel</button>
+      <button style="display:none" id="cancelChangeAfterHWBot" onclick="hideAfterHWBots()" class="btn btn-danger">Close</button>
 
       </div>
     </div>
@@ -247,6 +247,8 @@
   <!-- /.container -->
 
   <header style="display:none" id="beforeHomewokBots">
+
+    <h1 style="color:white"><b>Before Homework Bots</b></h1>
    <!-- Page Features -->
     <div class="row text-center">
 
@@ -345,6 +347,9 @@
    <!-- /.row -->
 
 <header id="duringHomewokBots" style="display:none">
+
+    <h1 style="color:white"><b>During Homework Bots</b></h1>
+
 <div class="row text-center">
 
 
@@ -405,6 +410,8 @@
   document.getElementById("afterHomewokBots").style.display = "block";
   document.getElementById("cancelChangeAfterHWBot").style.display = "block";
   document.getElementById("changeAfterHWBot").style.display = "none";
+   hideBeforeHWBots();
+ hideDuringHWBots();
 } 
 
 function hideAfterHWBots(){
@@ -416,6 +423,7 @@ function hideAfterHWBots(){
 
  <!-- Page Features -->
   <header id="afterHomewokBots" style="display:none">  
+       <h1 style="color:white"><b>After Homework Bots</b></h1>
     <div class="row text-center">
 
       <div class="col-lg-3 col-md-6 mb-4">
@@ -441,32 +449,62 @@ function hideAfterHWBots(){
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <div class="card-body">
-
           <div id="GameImg">
             <a href="https://sprz05.github.io/ITHIB_v1.0/game.html"><img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vSikR-EfX5noiig1GAF1Pf1MhhZnf7URxPeNoTCNmFGm2Zv48HbAdQUb27q0hcHgq_wW1_amEVz9iis/pub?w=960&amp;h=720">
             <h4><a href="https://sprz05.github.io/ITHIB_v1.0/game.html">Play Games<a><h4>
-
             <p class="card-text" style="color:white">Play games online as a reward after homework!</p>
-
-          </div>
-                    </div>
-
-          <div class="card-footer">
-
+            </div>
+            </div>
+            <div class="card-footer">
             <button id="addGameBtn" onclick="setAndGetAfterHomeworkBot()" class="btn btn-primary">Add</button>
-
           </div>
         </div>
       </div>
-
     </div>
-
   </header>
-
-
 </body>
   <!-- Page Content -->
 </html>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div class="container">
+  
+
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#modal-notification').modal('show');
+    });
+</script>
+
+
+
+<!-- basic modal -->
+<div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+            <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+              <div class="modal-content bg-gradient-danger">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <center>
+         <i class="ni ni-bell-55 ni-3x"></i>
+        <h4 style="color:white"><b>Confused on which bots to use?</b></h4>
+        <p>Try using our goal bot!</p>
+        <a href="goalBotMain.html"><button class="btn btn-danger">Sure!</button></a>
+      </center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No Thanks</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -592,6 +630,8 @@ function showBeforeHWBots(){
   document.getElementById("beforeHomewokBots").style.display = "block";
   document.getElementById("cancelChangeBeforeHWBot").style.display = "block";
   document.getElementById("changeBeforeHWBot").style.display = "none";
+ hideDuringHWBots();
+ hideAfterHWBots();
 } 
 
 function hideBeforeHWBots(){
@@ -604,6 +644,8 @@ function showDuringHWBots(){
   document.getElementById("duringHomewokBots").style.display = "block";
   document.getElementById("cancelChangeDuringHWBot").style.display = "block";
   document.getElementById("changeDuringHWBot").style.display = "none";
+   hideBeforeHWBots();
+ hideAfterHWBots();
 } 
 
 function hideDuringHWBots(){
@@ -614,3 +656,5 @@ function hideDuringHWBots(){
 } 
 
 </script>
+
+

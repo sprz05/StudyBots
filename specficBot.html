@@ -81,7 +81,7 @@
                 </a>
 
                 <a href="https://sprz05.github.io/StudyBots/duringHWBots.html" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                 <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                     <i class="ni pencil-ruler"></i>
                     <i class="fas fa-pencil-ruler"></i>
                   </div>
@@ -191,7 +191,7 @@
     <p style="color:white"><b>Want to make a homework routine with study bots?</b></p>
       <button class="btn bg-gradient-warning"><a href="specficBotHome.html" style="color:white">My Routine</a></button>
     <p style="color:white"><b>Don't know which bot to use? Use our goal bot to help you decide!</b></p>
-    <a href="https://sprz05.github.io/ITHIB_v1.0/goalBotMain.html"><button style="color:white" class="btn bg-gradient-success">Sure!</button></a>
+    <a href="https://sprz05.github.io/ITHIB_v1.0/goalBotMain.html"><button style="color:white" class="btn btn-danger">Sure!</button></a>
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
       <h1 class="display-3">Before Homework</h1>
@@ -454,11 +454,26 @@
         <div class="card h-100">
           <img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vQfTUaRBBN2j6OJMAtojBIGzx_4R2kvwJQd6TkWZewXdfB09QJtuL4vQ2RUV_10ZIl2IKAEs3RsPEGK/pub?w=241&amp;h=249">
           <div class="card-body">
-            <h4 class="card-title">WWC (3)</h4>
+            <h4 class="card-title">WWC</h4>
             <p class="card-text">After school clubs, activites and projects made by students!</p>
           </div>
           <div class="card-footer">
             <a href="https://the-programmingclub.github.io/World-Wide-Clubs/" class="btn btn-primary">WWC</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+          <div id="GameImg">
+            <a href="https://sprz05.github.io/ITHIB_v1.0/game.html"><img class="card-img-top" src="https://docs.google.com/drawings/d/e/2PACX-1vSikR-EfX5noiig1GAF1Pf1MhhZnf7URxPeNoTCNmFGm2Zv48HbAdQUb27q0hcHgq_wW1_amEVz9iis/pub?w=960&amp;h=720">
+            <h4><a href="https://sprz05.github.io/ITHIB_v1.0/game.html">Play Games<a><h4>
+            <p class="card-text" style="color:white">Play games online as a reward after homework!</p>
+            </div>
+            </div>
+            <div class="card-footer">
+            <button id="addGameBtn" onclick="setAndGetAfterHomeworkBot()" class="btn btn-primary">Add</button>
           </div>
         </div>
       </div>
@@ -494,30 +509,31 @@
 
 <script type="text/javascript">
     $(window).on('load', function() {
-        $('#basicModal').modal('show');
+        $('#modal-notification').modal('show');
     });
 </script>
 
 
 
 <!-- basic modal -->
-<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
+<div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+            <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+              <div class="modal-content bg-gradient-danger">
       <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Hey there!</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3 style="color:gray">We made somthing new for you!</h3>
-        <p>Are you confused on what bots to use?</p>
+        <center>
+         <i class="ni ni-bell-55 ni-3x"></i>
+        <h4 style="color:white"><b>Confused on which bots to use?</b></h4>
         <p>Try using our goal bot!</p>
-        <a href="goalBotMain.html"><button class="btn btn-warning">Sure!</button></a>
+        <a href="goalBotMain.html"><button class="btn btn-danger">Sure!</button></a>
+      </center>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">No Thanks</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No Thanks</button>
       </div>
     </div>
   </div>
