@@ -179,20 +179,11 @@
 
   .large-font {
     font-size: 48px;
-
   }
 
   .xlarge-font {
     font-size: 64px
   }
-
-
-  }
-
-  .xlarge-font {
-    font-size: 64px
-  }
-
 
   .button {
     border: none;
@@ -259,7 +250,6 @@
 
 
 
-
       &:before {
           content: "";
           position: absolute;
@@ -288,44 +278,6 @@
           }
       }
   }
-
-
-
-
-
-
-
-
-
-      &:before {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 600px;
-          height: 2000px;
-          background: theme-color("secondary");
-          transform: skew(0,-8deg);
-      }
-
-      .container {
-          pointer-events: auto;
-          position: relative;
-      }
-  }
-
-  .nav-footer {
-      .nav-link {
-          font-size: $font-size-sm;
-      }
-
-      .nav-item:last-child {
-          .nav-link {
-              padding-right: 0;
-          }
-      }
-  }
-
 
 
 
@@ -333,13 +285,14 @@
 
   .feedback-button {
     height: 40px;
-    border-radius: 8px;
-    background: #f4f5f7;
+    border: solid 3px #759aff;
+    border-radius: 10px;
+    background: #759aff;
     width: 100px;
     line-height: 32px;
     -webkit-transform: rotate(-90deg);
     font-weight: 600;
-    color:#759aff;
+    color: white;
     transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -386,9 +339,7 @@ footer {
   <!-- CSS Files -->
   <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="assets\css\background.css">
-  <link rel="stylesheet" type="text/css" href="convery.css">
-  <link rel="stylesheet" type="text/css" href="slider.css">
-
+<link rel="stylesheet" type="text/css" href="convery.css">
 
 </head>
 
@@ -405,9 +356,6 @@ footer {
 
 
 <style>
-body {
-  font-family: 'Lato', sans-serif;
-}
 
 .overlay {
   height: 0%;

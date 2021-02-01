@@ -319,6 +319,29 @@ footer {
   padding: 5px;
 }
 
+
+  .feedback-button {
+    height: 40px;
+    border: solid 3px #759aff;
+    border-radius: 10px;
+    background: #759aff;
+    width: 100px;
+    line-height: 32px;
+    -webkit-transform: rotate(-90deg);
+    font-weight: 600;
+    color: white;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    text-align: center;
+    font-size: 17px;
+    position: fixed;
+    right: -40px;
+    top: 45%;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    z-index: 999;
+  }
+
   </style>
 
 
@@ -343,6 +366,9 @@ footer {
 
 </head>
 
+<div id="feedback-main">
+  <a id="popup" class="feedback-button" href='feedbackFormHP.html' data-fc-open='iqdbx' type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Feedback</a>
+<script src="_include/js/feedback.js"></script>
 
 
   <body style="background-color:#1d0536;">
@@ -416,17 +442,7 @@ footer {
                 </a>
 
 
-                 <a href="makeAStudyBotCheck.html"  class="nav-link"  role="button">
-
-                     <i class="fas fa-envelope-open-text"></i>
-                    <span class="nav-link-inner--text">Make a Study Bot</span>
-                  </a>
-
-                 <a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html"  class="nav-link" href="#" role="button">
-                    <i class="fas fa-info-circle"></i>
-                   <span class="nav-link-inner--text">Study Mode</span>
-                 </a>
-
+                
 
               </div>
 
